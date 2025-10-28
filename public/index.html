@@ -7,111 +7,176 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
- /* 🌸 Tema general rosado moderno */
+/* 🌸 Estilo general - Rosa moderno tipo glass UI */
 body {
-  background-color: #1b0b14; /* Fondo oscuro con tono vino */
-  color: #ffe4f2; /* Texto rosado claro */
-  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #fff5f9, #ffe6f0);
+  color: #5a1846;
+  font-family: "Inter", "Poppins", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 
-/* 🌺 Navbar */
+/* 🌺 Navbar minimalista */
 .navbar {
-  background-color: #2a0e22 !important;
-  border-bottom: 1px solid #ff7ab8;
-  box-shadow: 0 0 10px rgba(255, 122, 184, 0.3);
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 122, 184, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.15);
+  border-radius: 0 0 20px 20px;
+  padding: 0.8rem 2rem;
 }
 
-/* 🌼 Botones base */
+/* ✨ Botones base */
 .btn {
-  border-radius: 12px;
-  transition: all 0.3s ease;
+  border-radius: 20px;
+  padding: 10px 20px;
   font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  letter-spacing: 0.5px;
 }
 
-/* 🌷 Botón outline */
-.btn-outline-light {
-  border-color: #ff9fcb;
-  color: #ff9fcb;
-}
-.btn-outline-light:hover {
-  background-color: #ff9fcb;
-  color: #2a0e22;
-  box-shadow: 0 0 15px rgba(255, 159, 203, 0.8);
-}
-
-/* 🌸 Botón principal (login) */
+/* 💖 Botón principal */
 .btn-primary {
-  background: linear-gradient(45deg, #ff5fa2, #ff9ec4);
+  background: linear-gradient(145deg, #ff7ab8, #ffb6d9);
+  color: white;
   border: none;
-  box-shadow: 0 0 10px rgba(255, 95, 162, 0.5);
+  box-shadow: 0 4px 10px rgba(255, 122, 184, 0.3);
 }
 .btn-primary:hover {
-  background: linear-gradient(45deg, #ff7fb4, #ffc0d9);
-  box-shadow: 0 0 20px rgba(255, 159, 203, 0.8);
-  transform: scale(1.05);
+  background: linear-gradient(145deg, #ff91c2, #ffd1e5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 122, 184, 0.4);
 }
 
-/* 🌺 Botón agregar */
+/* 🌷 Botón agregar */
 .btn-success {
-  background: linear-gradient(45deg, #f06292, #ffb6d9);
+  background: linear-gradient(145deg, #f06292, #ffb6d9);
+  color: #fff;
   border: none;
-  box-shadow: 0 0 10px rgba(240, 98, 146, 0.5);
+  box-shadow: 0 4px 10px rgba(240, 98, 146, 0.3);
 }
 .btn-success:hover {
-  box-shadow: 0 0 20px rgba(240, 98, 146, 0.8);
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(240, 98, 146, 0.4);
 }
 
-/* 🌸 Botón cerrar sesión */
+/* 💗 Botón eliminar / cerrar sesión */
 .btn-danger {
-  background: linear-gradient(45deg, #e91e63, #ff7ab8);
+  background: linear-gradient(145deg, #ff4d94, #ff9ec4);
   border: none;
-  box-shadow: 0 0 10px rgba(233, 30, 99, 0.5);
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 77, 148, 0.3);
 }
 .btn-danger:hover {
-  box-shadow: 0 0 20px rgba(233, 30, 99, 0.8);
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 77, 148, 0.4);
 }
 
-/* 🌹 Tarjetas */
+/* 🌸 Botón contorno */
+.btn-outline-light {
+  border: 2px solid #ff7ab8;
+  color: #ff4d94;
+  background: transparent;
+}
+.btn-outline-light:hover {
+  background-color: #ff7ab8;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(255, 122, 184, 0.4);
+}
+
+/* 💅 Tarjetas con efecto vidrio */
 .card {
-  background-color: #2a0e22;
-  border: 1px solid #ff7ab8;
-  border-radius: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 182, 193, 0.4);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(255, 182, 193, 0.15);
+  backdrop-filter: blur(14px);
+  transition: all 0.4s ease;
 }
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 20px rgba(255, 122, 184, 0.6);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(255, 182, 193, 0.3);
 }
 
-/* 💕 Títulos de productos */
+/* 💕 Título de producto */
 .card-title {
-  color: #ff9fcb;
+  color: #e91e63;
   font-weight: 700;
+  font-size: 1.2rem;
 }
 
 /* 💎 Precio */
 .card .card-text {
-  color: #ffffff !important;
-  font-weight: bold;
+  color: #5a1846 !important;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 /* 💖 Categoría */
 .badge.bg-secondary {
   background-color: #ff7ab8 !important;
-  color: #2a0e22 !important;
-  font-weight: 600;
+  color: #fff !important;
+  border-radius: 30px;
+  padding: 6px 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
-/* 🌸 Efecto onda de botones */
-.btn::after {
-  content: "";
-  position: absolute;
-  width: 200%;
-  h
+/* 🌼 Iconos editar / eliminar */
+.btn-icon {
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+.btn-icon.edit-btn {
+  color: #e91e63;
+}
+.btn-icon.edit-btn:hover {
+  color: #ff9ec4;
+  text-shadow: 0 0 8px #ffb6d9;
+  transform: scale(1.15);
+}
+.btn-icon.delete-btn {
+  color: #ff4d94;
+}
+.btn-icon.delete-btn:hover {
+  color: #ff80b5;
+  text-shadow: 0 0 10px #ffc0d9;
+  transform: scale(1.15);
+}
+
+/* 🌸 Inputs y formularios */
+input, select, textarea {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ffb6d9;
+  border-radius: 16px;
+  padding: 10px 14px;
+  width: 100%;
+  color: #5a1846;
+  outline: none;
+  transition: all 0.3s ease;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #ff7ab8;
+  box-shadow: 0 0 10px rgba(255, 122, 184, 0.4);
+}
+
+/* ✨ Footer */
+footer {
+  text-align: center;
+  padding: 1.2rem;
+  background-color: #ffe6f0;
+  color: #b03c6a;
+  font-size: 0.9rem;
+  border-top: 1px solid #ffc0d9;
+  border-radius: 20px 20px 0 0;
+}
 
   </style>
 </head>
