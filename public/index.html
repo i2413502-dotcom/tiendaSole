@@ -7,185 +7,112 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
-  /* Fondo general oscuro con detalles lilas */
-  body {
-    background-color: #0a0a0f;
-    color: #f3e9ff;
-    font-family: "Poppins", sans-serif;
-  }
+ /* 🌸 Tema general rosado moderno */
+body {
+  background-color: #1b0b14; /* Fondo oscuro con tono vino */
+  color: #ffe4f2; /* Texto rosado claro */
+  font-family: "Poppins", sans-serif;
+}
 
-  /* Navbar */
-  .navbar {
-    background-color: #1a1125 !important;
-    border-bottom: 1px solid #3a2755;
-  }
+/* 🌺 Navbar */
+.navbar {
+  background-color: #2a0e22 !important;
+  border-bottom: 1px solid #ff7ab8;
+  box-shadow: 0 0 10px rgba(255, 122, 184, 0.3);
+}
 
-  /* Botones base */
-  .btn {
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    font-weight: 600;
-  }
+/* 🌼 Botones base */
+.btn {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
 
-  /* Botones outline */
-  .btn-outline-light {
-    border-color: #c77dff;
-    color: #c77dff;
-  }
+/* 🌷 Botón outline */
+.btn-outline-light {
+  border-color: #ff9fcb;
+  color: #ff9fcb;
+}
+.btn-outline-light:hover {
+  background-color: #ff9fcb;
+  color: #2a0e22;
+  box-shadow: 0 0 15px rgba(255, 159, 203, 0.8);
+}
 
-  .btn-outline-light:hover {
-    background-color: #c77dff;
-    color: #0a0a0f;
-  }
+/* 🌸 Botón principal (login) */
+.btn-primary {
+  background: linear-gradient(45deg, #ff5fa2, #ff9ec4);
+  border: none;
+  box-shadow: 0 0 10px rgba(255, 95, 162, 0.5);
+}
+.btn-primary:hover {
+  background: linear-gradient(45deg, #ff7fb4, #ffc0d9);
+  box-shadow: 0 0 20px rgba(255, 159, 203, 0.8);
+  transform: scale(1.05);
+}
 
-  /* Botón login */
-  .btn-primary {
-    background-color: #a855f7;
-    border: none;
-  }
+/* 🌺 Botón agregar */
+.btn-success {
+  background: linear-gradient(45deg, #f06292, #ffb6d9);
+  border: none;
+  box-shadow: 0 0 10px rgba(240, 98, 146, 0.5);
+}
+.btn-success:hover {
+  box-shadow: 0 0 20px rgba(240, 98, 146, 0.8);
+  transform: scale(1.05);
+}
 
-  .btn-primary:hover {
-    background-color: #c084fc;
-  }
+/* 🌸 Botón cerrar sesión */
+.btn-danger {
+  background: linear-gradient(45deg, #e91e63, #ff7ab8);
+  border: none;
+  box-shadow: 0 0 10px rgba(233, 30, 99, 0.5);
+}
+.btn-danger:hover {
+  box-shadow: 0 0 20px rgba(233, 30, 99, 0.8);
+  transform: scale(1.05);
+}
 
-  /* Botón agregar */
-  .btn-success {
-    background-color: #9d4edd;
-    border: none;
-  }
+/* 🌹 Tarjetas */
+.card {
+  background-color: #2a0e22;
+  border: 1px solid #ff7ab8;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(255, 122, 184, 0.6);
+}
 
-  .btn-success:hover {
-    background-color: #b176f9;
-  }
+/* 💕 Títulos de productos */
+.card-title {
+  color: #ff9fcb;
+  font-weight: 700;
+}
 
-  /* Botón cerrar sesión */
-  .btn-danger {
-    background-color: #7b2cbf;
-    border: none;
-  }
+/* 💎 Precio */
+.card .card-text {
+  color: #ffffff !important;
+  font-weight: bold;
+}
 
-  .btn-danger:hover {
-    background-color: #a05cf8;
-  }
+/* 💖 Categoría */
+.badge.bg-secondary {
+  background-color: #ff7ab8 !important;
+  color: #2a0e22 !important;
+  font-weight: 600;
+}
 
-  /* Tarjetas */
-  .card {
-    background-color: #1a1125;
-    border: 1px solid #3a2755;
-    border-radius: 14px;
-    transition: transform 0.2s ease, box-shadow 0.3s;
-  }
+/* 🌸 Efecto onda de botones */
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  h
 
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(169, 85, 247, 0.6);
-  }
-
-  /* Títulos de productos */
-  .card-title {
-    color: #c77dff;
-  }
-
-  /* Precio */
-  .card .card-text {
-    color: #ffffff !important;
-    font-weight: bold;
-  }
-
-  /* Categoría */
-  .badge.bg-secondary {
-    background-color: #3a2755 !important;
-    color: #f3e9ff !important;
-  }
-
-  /* Animación y efectos de botones */
-  .btn:hover {
-    transform: scale(1.05);
-  }
-
-  .btn-primary {
-    background: linear-gradient(45deg, #7b2cbf, #c77dff);
-    box-shadow: 0 0 10px rgba(199, 125, 255, 0.5);
-  }
-  .btn-primary:hover {
-    box-shadow: 0 0 20px rgba(199, 125, 255, 0.8);
-  }
-
-  .btn-success {
-    background: linear-gradient(45deg, #9d4edd, #c77dff);
-    box-shadow: 0 0 10px rgba(157, 78, 221, 0.5);
-  }
-  .btn-success:hover {
-    box-shadow: 0 0 20px rgba(157, 78, 221, 0.8);
-  }
-
-  .btn-danger {
-    background: linear-gradient(45deg, #7b2cbf, #c77dff);
-    box-shadow: 0 0 10px rgba(123, 44, 191, 0.5);
-  }
-  .btn-danger:hover {
-    box-shadow: 0 0 20px rgba(123, 44, 191, 0.8);
-  }
-
-  .btn-outline-light:hover {
-    background: #c77dff;
-    color: #0a0a0f;
-    box-shadow: 0 0 15px rgba(199, 125, 255, 0.8);
-  }
-
-  /* Efecto onda */
-  .btn::after {
-    content: "";
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    top: -50%;
-    left: -50%;
-    background: rgba(255, 255, 255, 0.1);
-    transform: scale(0);
-    transition: transform 0.5s ease;
-    border-radius: 50%;
-    z-index: 1;
-  }
-
-  .btn:active::after {
-    transform: scale(1);
-    transition: 0s;
-  }
-
-  .btn span {
-    position: relative;
-    z-index: 2;
-  }
-
-  /* Iconos editar y eliminar */
-  .btn-icon.edit-btn {
-    color: #c77dff;
-    background: transparent;
-    border: none;
-    font-size: 1.2rem;
-    transition: 0.3s;
-  }
-
-  .btn-icon.edit-btn:hover {
-    color: #e0aaff;
-    text-shadow: 0 0 8px #e0aaff, 0 0 12px #e0aaff;
-    transform: scale(1.2);
-  }
-
-  .btn-icon.delete-btn {
-    color: #ff4dff;
-    background: transparent;
-    border: none;
-    font-size: 1.2rem;
-    transition: 0.3s;
-  }
-
-  .btn-icon.delete-btn:hover {
-    color: #ff85ff;
-    text-shadow: 0 0 8px #ff85ff, 0 0 12px #ff85ff;
-    transform: scale(1.2);
-  }
   </style>
 </head>
 <body>
