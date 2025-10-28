@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Tienda</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-6 bg-gray-100">
+  <h1 class="text-3xl font-bold mb-6">Panel de Administración</h1>
+
+  <!-- Categoría -->
+  <h2 class="text-xl font-semibold mb-2">Agregar Categoría</h2>
+  <form id="formCategoria" class="mb-6 space-y-3">
+    <input type="text" id="cat_nombre" placeholder="Nombre categoría" class="border px-3 py-2 w-full" required>
+    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Guardar</button>
+  </form>
+
+  <!-- Producto -->
+  <h2 class="text-xl font-semibold mb-2">Agregar Producto</h2>
+  <form id="formProducto" class="mb-6 space-y-3">
+    <input type="text" id="prod_nombre" placeholder="Nombre producto" class="border px-3 py-2 w-full" required>
+    <input type="number" id="prod_precio" placeholder="Precio" class="border px-3 py-2 w-full" required>
+    <select id="prod_categoria" class="border px-3 py-2 w-full"></select>
+    <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Guardar</button>
+  </form>
+
+  <!-- Imagen -->
+  <h2 class="text-xl font-semibold mb-2">Agregar Imagen a Producto</h2>
+  <form id="formImagen" class="mb-6 space-y-3">
+    <input type="text" id="img_url" placeholder="URL de imagen" class="border px-3 py-2 w-full" required>
+    <select id="img_producto" class="border px-3 py-2 w-full"></select>
+    <button type="submit" class="bg-purple-600 text-white px-4 py-2 rounded">Guardar</button>
+  </form>
+
+  <script src="admin.js"></script>
+</body>
+</html>
