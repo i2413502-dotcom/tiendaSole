@@ -25,7 +25,8 @@ app.use((req, res, next) => {
     clientIP = clientIP.split(',')[0].trim();
   }
 
-  const allowedIPs = ['45.232.149.130', '45.232.149.146', '45.232.149.145'];
+  const allowedIPs = ['45.232.149.130', '45.232.149.146', '45.232.149.145', '45.5.57.209', '169.197.142.208'];
+
   if (allowedIPs.includes(clientIP)) {
     next();
   } else {
